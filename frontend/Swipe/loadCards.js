@@ -33,6 +33,11 @@ async function loadCards() {
                 <p>${card.Text}</p>
             </div>
             `;
+
+            cardElement.style.position = 'absolute';
+            cardElement.style.zIndex = cards.length - i;
+            cardElement.style.top = `${-i * 20}px`;
+            cardElement.style.opacity = 1 - i * 0.2;
             document.querySelector('.cards').append(cardElement);
             i++;
         }

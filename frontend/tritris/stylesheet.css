@@ -1,0 +1,79 @@
+:root
+{
+    --game-block-size: 35px;
+}
+
+#TETRIS
+{
+    background-color:#F1DABF ;
+    display: grid;
+    align-items: flex-start; /* Aligne les éléments en haut verticalement */
+    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes, la deuxième est deux fois plus large */
+    grid-template-rows: 1fr 8fr;
+    gap:20px;
+    height: 100%;
+    width: min-content;
+}
+
+/* Définition de la grille du tetris */
+#TETRIS>div:nth-child(1)
+{
+    grid-column: 2 / 3;
+    grid-row: span 2;
+    display:inline-grid;
+    grid-template-columns: repeat(9, var(--game-block-size)) ;
+    grid-template-rows: repeat(20, var(--game-block-size)) ;
+    background-color: gray;
+    border:solid black;
+    border-radius: 8px; 
+}
+
+/* chaques carrés du tétris */
+
+#TETRIS>div:nth-child(1)>div
+{
+    box-sizing: border-box;
+    width:100%;
+    border:solid blue;
+    border-radius: 5px;
+}
+
+#TETRIS>div:nth-child(2)
+{
+    grid-row: 1 / 2;
+}
+
+#TETRIS>div:nth-child(3)
+{
+    grid-row: 2 / 3;
+}
+
+/* Bloc qui contient les deux blocs ( score et piece d'apres )*/
+
+#TETRIS>div:not(:nth-child(1))
+{
+    grid-column:3;
+    text-align: left;
+}
+
+/* Intérieur et mise en forme des deux blocs ( score et piece d'apres )*/
+
+#TETRIS>.blocksInformations>div{
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.blockRed{
+    color:red;
+}
+.blockGreen{
+    color:green;
+}
+.blockBlue{
+    color:blue;
+}
+.blockYellow{
+    color:yellow;
+}
