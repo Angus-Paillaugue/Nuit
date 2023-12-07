@@ -16,7 +16,7 @@ const navbarMarkup = `
     </div>
   </div>
   <div style="height: 100%;">
-    <a href="/" id="navTitle" style="height: 100%;"><img src="./src/logo_banner.png" alt="" style="height: 100%;"></a>
+    <a href="/" id="navTitle" style="height: 100%;"><img src="{{logoUrl}}" alt="" style="height: 100%;"></a>
   </div>
   <div>
     <div>
@@ -44,8 +44,10 @@ $(document).ready(function () {
     <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`
   );
 
+  const logoUrl = baseURl + "/src/logo_banner.png";
+
   // Add navbar to the page
-  $(navbarMarkup).prependTo("body");
+  $(navbarMarkup.replace("{{logoUrl}}", logoUrl)).prependTo("body");
   
   // Nav dropdown
   $("#hamburgerButton").click(() => {
