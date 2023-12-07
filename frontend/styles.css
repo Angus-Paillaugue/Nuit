@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 :root {
     --base-theme-text-color: #f5f5f5;
     --base-theme-bg-color: #ECE3CE;
@@ -6,36 +9,91 @@
     --base-theme-color-primary-dark: #3A4D39;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     color: var(--base-theme-text-color);
     background-color: var(--base-theme-bg-color);
 }
 
 [data-theme="aqua"]{
     --base-theme-text-color: #2f2f2f;
-    --base-theme-bg-color: #C5FFF8;
-    --base-theme-color-primary-light: #96EFFF;
-    --base-theme-color-primary: #5FBDFF;
+    --base-theme-bg-color: #c5eaff;
+    --base-theme-color-primary-light: #96d1ff;
+    --base-theme-color-primary: #438bbf;
     --base-theme-color-primary-dark: #7B66FF;
 }
 
 [data-theme="desert"]{
     --base-theme-text-color: #2f2f2f;
-    --base-theme-bg-color: #FFC47E;
-    --base-theme-color-primary-light: #FFAD84;
-    --base-theme-color-primary: #FFF78A;
-    --base-theme-color-primary-dark: #FFE382;
+    --base-theme-bg-color: #F9E0BB;
+    --base-theme-color-primary-light: #FFC26F;
+    --base-theme-color-primary: #C38154;
+    --base-theme-color-primary-dark: #884A39;
 }
 
 [data-theme="noel"]{
     --base-theme-text-color: #2f2f2f;
-    --base-theme-bg-color: #FFFDEF;
+    --base-theme-bg-color: #e8e6da;
     --base-theme-color-primary-light: #F1F1F1;
     --base-theme-color-primary: #E70000;
     --base-theme-color-primary-dark: #C50000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#themeSwitchWrapper {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+#themeSwitchWrapper > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    aspect-ratio: 1;
+    padding: .5rem;
+    border-radius: .3rem;
+    width: 3rem;
+}
+#themeSwitchWrapper > button:nth-child(1) {
+    background-color: #4F6F52;
+    color: #ECE3CE;
+}
+#themeSwitchWrapper > button:nth-child(2) {
+    background-color: #438bbf;
+    color: #2f2f2f;
+}
+#themeSwitchWrapper > button:nth-child(3) {
+    background-color: #C38154;
+    color: #2f2f2f;
+}
+#themeSwitchWrapper > button:nth-child(4) {
+    background-color: #E70000;
+    color: #2f2f2f;
+}
+
+@media (max-width: 768px) { 
+    #themeSwitchWrapper > button {
+        padding: .2rem;
+        width: 2rem;
+    }
 }

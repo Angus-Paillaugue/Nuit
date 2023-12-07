@@ -3,6 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    margin: 0;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     flex-direction: row;
@@ -54,6 +55,7 @@
     display: flex; 
 }
 #navContent a {
+    text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.75rem; 
     font-weight: 700; 
