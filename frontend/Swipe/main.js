@@ -8,7 +8,7 @@ var love = document.getElementById('love');
 function initCards(card, index) {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
-    newCards.forEach(function (card, index) {
+    newCards.forEach(function(card, index) {
         card.style.zIndex = allCards.length - index;
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
         card.style.opacity = (10 - index) / 10;
@@ -19,14 +19,14 @@ function initCards(card, index) {
 
 initCards();
 
-allCards.forEach(function (el) {
+allCards.forEach(function(el) {
     var hammertime = new Hammer(el);
 
-    hammertime.on('pan', function (event) {
+    hammertime.on('pan', function(event) {
         el.classList.add('moving');
     });
 
-    hammertime.on('pan', function (event) {
+    hammertime.on('pan', function(event) {
         if (event.deltaX === 0) return;
         if (event.center.x === 0 && event.center.y === 0) return;
 
@@ -40,7 +40,7 @@ allCards.forEach(function (el) {
         event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
     });
 
-    hammertime.on('panend', function (event) {
+    hammertime.on('panend', function(event) {
         el.classList.remove('moving');
         tinderContainer.classList.remove('tinder_love');
         tinderContainer.classList.remove('tinder_nope');
@@ -68,7 +68,7 @@ allCards.forEach(function (el) {
 });
 
 function createButtonListener(love) {
-    return function (event) {
+    return function(event) {
         var cards = document.querySelectorAll('.tinder--card:not(.removed)');
         var moveOutWidth = document.body.clientWidth * 1.5;
 
