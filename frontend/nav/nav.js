@@ -6,7 +6,7 @@ $(document).ready(function(){
   $('nav').load('https://raw.githubusercontent.com/AldanariW/Nuit/main/frontend/src/navbar.html');
   
   // Nav dropdown
-  $("#hamburgerButton").click(function(){
+  $("#hamburgerButton").click(() => {
     $("#dropdown").toggleClass("opacity-0 opacity-100 z-50, -z-10");
   });
   
