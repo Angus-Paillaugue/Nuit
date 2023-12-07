@@ -1,5 +1,5 @@
 const navbarMarkup = `
-<div id="navContent">
+<nav id="navContent">
   <div>
     <div>
       <a href="/">Accueil</a>
@@ -33,7 +33,7 @@ const navbarMarkup = `
       <span id="userScore"></span>                  
     </div>
   </div>
-</div>
+</nav>
 <div id="navSpacer"></div>
 `;
 
