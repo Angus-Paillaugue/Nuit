@@ -1,0 +1,41 @@
+:root {
+    --base-theme-text-color: #f5f5f5;
+    --base-theme-bg-color: #ECE3CE;
+    --base-theme-color-primary-light: #739072;
+    --base-theme-color-primary: #4F6F52;
+    --base-theme-color-primary-dark: #3A4D39;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--base-theme-text-color);
+    background-color: var(--base-theme-bg-color);
+}
+
+[data-theme="aqua"]{
+    --base-theme-text-color: #2f2f2f;
+    --base-theme-bg-color: #C5FFF8;
+    --base-theme-color-primary-light: #96EFFF;
+    --base-theme-color-primary: #5FBDFF;
+    --base-theme-color-primary-dark: #7B66FF;
+}
+
+[data-theme="desert"]{
+    --base-theme-text-color: #2f2f2f;
+    --base-theme-bg-color: #FFC47E;
+    --base-theme-color-primary-light: #FFAD84;
+    --base-theme-color-primary: #FFF78A;
+    --base-theme-color-primary-dark: #FFE382;
+}
+
+[data-theme="noel"]{
+    --base-theme-text-color: #2f2f2f;
+    --base-theme-bg-color: #FFFDEF;
+    --base-theme-color-primary-light: #F1F1F1;
+    --base-theme-color-primary: #E70000;
+    --base-theme-color-primary-dark: #C50000;
+}
