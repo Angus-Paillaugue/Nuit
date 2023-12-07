@@ -22,9 +22,11 @@ async function loadCards() {
         //const response = await fetch('http://localhost:3000/api/cards');
         //const cards = await response.json();
         const cards = Object.values(testJson.Card);
+        let i = 0;
         for (const card of cards) {
             const cardElement = document.createElement('div');
             cardElement.classList.add('card');
+            cardElement.id = `${i + 1}`;
             cardElement.innerHTML = `
             <div class="card-content">
                 <h3>${card.Title}</h3>
@@ -32,6 +34,7 @@ async function loadCards() {
             </div>
             `;
             document.querySelector('.cards').append(cardElement);
+            i++;
         }
     } catch (error) {
         console.error(error);
