@@ -1,5 +1,5 @@
 const navbarMarkup = `
-<div id="navContent">
+<nav id="navContent">
   <div>
     <div>
       <a href="/">Accueil</a>
@@ -33,12 +33,12 @@ const navbarMarkup = `
       <span id="userScore"></span>                  
     </div>
   </div>
-</div>
+</nav>
 <div id="navSpacer"></div>
 `;
 
 $(document).ready(function () {
-  const baseURl = location.origin + "/Nuit/frontend";
+  const baseURl = location.origin ;
   // Add Tailwind CSS
   $("head").append(`
     <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`

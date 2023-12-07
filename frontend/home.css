@@ -1,0 +1,71 @@
+main {
+    width: 100%;
+    min-height: calc(90vh - 64px);
+    max-width: 1000px;
+    margin: 5vh auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: block;
+}
+main > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-33%, -33%);
+    max-width: 100%;
+    width: 600px;
+    fill: var(--base-theme-color-primary);
+    z-index: -1;
+}
+main > section {
+    padding: 1rem;
+    background-color: rgba(204, 204, 204, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+main > section > section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    z-index: 10;
+}
+main > section > section > a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+main > section > section > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    aspect-ratio: 3/2;
+}
+main > section > section > a:hover > div {
+    opacity: 1;
+}
+main > section > section > a > div {
+    color: var(--base-theme-text-color);
+    padding: .5rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--base-theme-color-primary-dark) 100%);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
