@@ -35,6 +35,8 @@ async function loadCards() {
             `;
 
             cardElement.style.position = 'absolute';
+            cardElement.style.left = 'auto';
+            cardElement.style.right = 'auto';
             cardElement.style.zIndex = cards.length - i;
             cardElement.style.top = `${-i * 20}px`;
             cardElement.style.opacity = 1 - i * 0.2;

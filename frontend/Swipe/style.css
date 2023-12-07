@@ -1,4 +1,4 @@
-.cards {
+.cardsContainer {
     position: relative;
     height: 100vh;
     /* Ajustez selon vos besoins */
@@ -9,15 +9,24 @@
     align-items: center;
 }
 
+.cards {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+}
+
 .card {
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
-    position: absolute;
+    width: 100%;
     transition: opacity 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
     /* Ajoutez une transition d'opacité pour un effet fluide */
+    /* Ajustez la valeur selon vos besoins, la moitié de la hauteur de la fenêtre */
 }
 
 .card img {
