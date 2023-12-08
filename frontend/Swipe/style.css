@@ -55,5 +55,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--base-theme-color-primary-dar);
+}
+#score {
+    color: var(--base-theme-color-primary-dark);
 }
