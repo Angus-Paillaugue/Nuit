@@ -58,4 +58,5 @@ h1 {
 }
 #score {
     color: var(--base-theme-color-primary-dark);
+    font-weight: bolder;
 }
