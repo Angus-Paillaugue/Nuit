@@ -16,7 +16,7 @@ const navbarMarkup = `
     </div>
   </div>
   <div style="height: 100%;">
-    <a href="/" id="navTitle" style="height: 100%;"><img src="{{logoUrl}}" alt="" style="height: 100%;"></a>
+    <a href="/" id="navTitle" style="height: 100%;"><img src="https://raw.githubusercontent.com/AldanariW/Nuit/main/frontend/src/logo_banner.png" alt="" style="height: 100%;"></a>
   </div>
   <div>
     <div>
@@ -38,16 +38,14 @@ const navbarMarkup = `
 `;
 
 $(document).ready(function () {
-  const baseURl = location.origin;
+  const baseURl = location.origin + "/Nuit/frontend";
   // Add Tailwind CSS
   $("head").append(`
     <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`
   );
 
-  const logoUrl = baseURl + "/src/logo_banner.png";
-
   // Add navbar to the page
-  $(navbarMarkup.replace("{{logoUrl}}", logoUrl)).prependTo("body");
+  $(navbarMarkup).prependTo("body");
   
   // Nav dropdown
   $("#hamburgerButton").click(() => {
