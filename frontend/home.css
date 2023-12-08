@@ -38,10 +38,11 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
+    width: 100%;
 }
 .Jeux > section > section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     z-index: 10;
 }
@@ -69,6 +70,7 @@
 .Jeux > section > section > a > div {
     color: var(--base-theme-text-color);
     padding: .5rem;
+    padding-top: 4rem;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--base-theme-color-primary-dark) 100%);
     transition: opacity 0.2s ease-in-out;

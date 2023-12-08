@@ -1,4 +1,3 @@
-// Make the DIV element draggable:
 document.getElementById("yesButton").addEventListener("click", onClick);
 document.getElementById("noButton").addEventListener("click", onClick);
 
