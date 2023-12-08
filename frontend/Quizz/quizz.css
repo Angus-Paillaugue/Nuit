@@ -66,3 +66,9 @@
 #quizzListe {
     list-style: none;
 }
+
+button {
+    background-color: var(--base-theme-color-primary);
+    color: var(--base-theme-text-color);
+    padding: .5rem 1rem;
+}

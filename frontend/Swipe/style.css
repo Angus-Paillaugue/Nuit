@@ -60,3 +60,9 @@ h1 {
     color: var(--base-theme-color-primary-dark);
     font-weight: bolder;
 }
+
+button {
+  background-color: var(--base-theme-color-primary);
+  color: var(--base-theme-text-color);
+  padding: .5rem 1rem;
+}
