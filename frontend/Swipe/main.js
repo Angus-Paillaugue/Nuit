@@ -16,7 +16,10 @@ function onClick(e) {
     }
     setTimeout(() => {
         button.removeAttribute("disabled");
-    }, 400);
+    }, 500);
+    moveForward();
+    document.getElementsByClassName("approved").opacity = 0;
+    document.getElementsByClassName("no-approved").opacity = 0;
 }
 
 function moveForward() {
