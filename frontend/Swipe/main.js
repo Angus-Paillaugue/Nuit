@@ -15,6 +15,12 @@ function onClick(e) {
     } else if (button.name == "No" && _card != null) {
         document.getElementById("score").textContent = parseInt(document.getElementById("score").innerText) - parseInt(_card.querySelector("label").innerText);
         swipeLeft();
+    } else if (_card == null) {
+        if (parseInt(document.getElementById("score").innerText) > 0) {
+            document.getElementById("score").textContent = document.getElementById("score").textContent + document.getElementById("score").innerText + "GG";
+        } else {
+            document.getElementById("score").textContent = document.getElementById("score").textContent + document.getElementById("score").innerText + "Too Bad...";
+        }
     }
     setTimeout(() => {
         button.removeAttribute("disabled");
