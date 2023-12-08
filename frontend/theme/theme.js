@@ -33,3 +33,10 @@ const showPatoche = () => {
 }
 
 setTimeout(showPatoche, getRandomTime());
+
+$(".themeSwitch > img").dblclick(() => {
+    $("body").append(`<img src="${location.origin + "/Nuit/frontend"}/src/charlie.png" id="charlie" />`);
+    setTimeout(() => {
+        $("#charlie").remove();
+    }, 3000);
+});
