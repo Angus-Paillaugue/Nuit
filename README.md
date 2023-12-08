@@ -1,15 +1,4 @@
-# NuitInfo2023
+# NuitInfo2023 : NIC Corp
 
-# API
-
-### Url de base de l'api : 
-
-## Routes :
- - GET /tetris/get-leaderboard  
-   - Descriptions : Retrieves all of the scores from the database 
-   - Input : none
-   - Return : all of the scored of tetris in the database
-
- - POST /tetris/new-score
-   - Description : Adds a score to the scores table
-   - Input : username@string, score@Integer
+## Où est Charlie ?
+Pour trouver Charlie, se rendre sur la page d'accueil. Au niveau des boutons de thème, positionner la souris qur la droite du bouton rouge. Attendre entre 5 à 10 secondes. Un personnage mystérieux devrait apparaître. Double cliquez vite sur lui! Une fois cela fait, Charlie devrait apparaître dans le coin supérieur droit de votre écran. Merci d'avoir jouer!
