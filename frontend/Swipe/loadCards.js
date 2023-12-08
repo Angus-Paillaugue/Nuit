@@ -19,6 +19,7 @@ async function loadCards() {
             <div class="card-content">
                 <h3>${card.title}</h3>
                 <p>${card.text}</p>
+                <label hidden= "true">${card.taux*100}</label>
             </div>
             `;
 
