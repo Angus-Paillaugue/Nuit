@@ -3,13 +3,12 @@ document.getElementById("yesButton").addEventListener("click", onClick);
 document.getElementById("noButton").addEventListener("click", onClick);
 
 function getCurrentCard() {
-    console.log(Array.from(document.getElementsByClassName("card")).map(e => (parseInt(e.id))));
     return Array.from(document.getElementsByClassName("card")).map(e => (parseInt(e.id)))[0];
 }
 
 function onClick(e) {
     let button = e.target;
-    button.setAttribute("disabled", "true")
+    button.setAttribute("disabled", "true");
     if (button.name == "Yes") {
         swipeRigth();
     } else if (button.name == "No") {
@@ -17,18 +16,15 @@ function onClick(e) {
     }
     moveForward();
     setTimeout(() => {
-        button.removeAttribute("disabled")
-    }, 400)
+        button.removeAttribute("disabled");
+    }, 400);
 }
 
 function moveForward() {
-
     Array.from(document.getElementsByClassName("card")).forEach(e => {
-        console.log(e);
         e.style.opacity = Number(e.style.opacity) + 0.2;
         e.style.top = (Number(e.style.top.slice(0, -2)) + 20) + "px";
     });
-
 }
 
 function dropCurrentCard() {
@@ -38,7 +34,6 @@ function dropCurrentCard() {
 function swipeRigth() {
     let currentCard = document.getElementById(getCurrentCard());
     if (currentCard != null) {
-
         let pos = 0;
         let opacity = 1;
         const threshold = 200;
@@ -62,7 +57,6 @@ function swipeRigth() {
 function swipeLeft() {
     let currentCard = document.getElementById(getCurrentCard());
     if (currentCard != null) {
-
         let pos = 0;
         let opacity = 1;
         const threshold = 200;
