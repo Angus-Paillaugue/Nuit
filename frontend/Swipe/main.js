@@ -1,24 +1,24 @@
 // Make the DIV element draggable:
+document.getElementById("yesButton").addEventListener("click", onClick);
+document.getElementById("noButton").addEventListener("click", onClick);
 
 function getCurrentCard() {
     console.log(Array.from(document.getElementsByClassName("card")).map(e => (parseInt(e.id))));
     return Array.from(document.getElementsByClassName("card")).map(e => (parseInt(e.id)))[0];
 }
 
-function onYesClick() {
-    console.log("Clicked on Yes" + getCurrentCard());
-    swipeRigth();
-
+function onClick(e) {
+    let button = e.target;
+    button.setAttribute("disabled", "true")
+    if (button.name == "Yes") {
+        swipeRigth();
+    } else if (button.name == "No") {
+        swipeLeft();
+    }
     moveForward();
-
-}
-
-function onNoClick() {
-    console.log("Clicked on No" + getCurrentCard());
-    swipeLeft();
-
-    moveForward();
-
+    setTimeout(() => {
+        button.removeAttribute("disabled")
+    }, 400)
 }
 
 function moveForward() {
@@ -38,7 +38,7 @@ function dropCurrentCard() {
 function swipeRigth() {
     let currentCard = document.getElementById(getCurrentCard());
     if (currentCard != null) {
-        
+
         let pos = 0;
         let opacity = 1;
         const threshold = 200;
