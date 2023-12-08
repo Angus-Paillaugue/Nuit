@@ -71,4 +71,9 @@ button {
     background-color: var(--base-theme-color-primary);
     color: var(--base-theme-text-color);
     padding: .5rem 1rem;
+    border: none;
+    border-radius: .2rem;
+}
+button:hover {
+    background-color: var(--base-theme-color-primary-dark);
 }
