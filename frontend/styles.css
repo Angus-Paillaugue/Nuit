@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0rem) scale(.8) translateY(1rem) rotateZ(45deg);
     scale: 1;
     z-index: -1;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 #themeSwitchWrapper > button.show > img {
     width: 3rem;
@@ -129,4 +129,20 @@ h1, h2, h3, h4, h5, h6 {
         bottom: 1rem;
         right: 1rem;
     }
+}
+
+#charlie {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    z-index: 100;
+    pointer-events: none;
+    animation: 3s charlieAnim forwards;
+}
+@keyframes charlieAnim {
+    0% { transform: translateX(100%); }
+    30%   { transform: translateX(0); }
+    70%   { transform: translateX(0); }
+    100% { transform: translateX(100%); }
 }
