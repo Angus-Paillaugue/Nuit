@@ -16,7 +16,7 @@ const navbarMarkup = `
     </div>
   </div>
   <div style="height: 100%;">
-    <a href="/" id="navTitle" style="height: 100%;"><img src="{{logoUrl}}" alt="" style="height: 100%;"></a>
+    <a href="/" id="navTitle" style="height: 100%;"><img src="https://raw.githubusercontent.com/AldanariW/Nuit/main/frontend/src/logo_banner.png" alt="" style="height: 100%;"></a>
   </div>
   <div>
     <div>
