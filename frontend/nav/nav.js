@@ -38,7 +38,7 @@ const navbarMarkup = `
 `;
 
 $(document).ready(function() {
-    const baseURl = location.origin + "/nav";
+    const baseURl = location.origin;
     // Add Tailwind CSS
     $("head").append(`
     <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`);
