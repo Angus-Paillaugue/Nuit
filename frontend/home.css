@@ -15,6 +15,7 @@ main > section > h1 {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
+    line-height: 2.5rem;
 }
 main > svg {
     position: absolute;
@@ -76,4 +77,11 @@ main > section > section > a > div {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) { 
+    main > section > section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
