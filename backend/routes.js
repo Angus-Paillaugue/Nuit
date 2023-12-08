@@ -7,12 +7,16 @@ router.get("/", async(req, res) => {
     res.status(200).json({ message: "Hello World!" });
 });
 
-router.get("/randomFact", async(req, res) => {
+router.get("/swiper/randomFact", async(req, res) => {
     const facts = await factsRef.find({}).toArray();
-
     const randomIndex = Math.floor(Math.random() * facts.length);
 
     res.status(200).json(facts[randomIndex]);
+});
+router.get("/swiper/all-facts", async(req, res) => {
+    const facts = await factsRef.find({}).toArray();
+
+    res.status(200).json(facts);
 });
 
 
