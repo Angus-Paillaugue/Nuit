@@ -1,59 +1,59 @@
-            p,
-            h3,
-            h1 {
-                color: #000;
-                text-align: center;
-            }
-            
-            .cardsContainer {
-                position: relative;
-                height: 60vh;
-                /* Ajustez selon vos besoins */
-                background-color: var(--base-theme-bg-colo);
-                /* Couleur de fond de la zone des cartes */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .cards {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-            }
-            
-            .card {
-                border: 1px solid #ccc;
-                background-color: #fff;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                min-width: 500px;
-                min-height: 200px;
-                transition: opacity 0.3s ease-in-out;
-                transform: translate(-50%, -50%);
-                /* Ajoutez une transition d'opacité pour un effet fluide */
-                /* Ajustez la valeur selon vos besoins, la moitié de la hauteur de la fenêtre */
-            }
-            
-            .card img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 10px;
-            }
-            
-            .card-content {
-                font-family: Arial, sans-serif;
-            }
-            
-            .Buttons {
-                margin-top: 140px;
-                transform: translate(-50%, -50%);
-            }
-            
-            .score {
-                position: relative;
-                background-color: var(--base-theme-bg-colo);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+p,
+h3,
+h1 {
+  color: #000;
+  text-align: center;
+}
+
+.cardsContainer {
+  position: relative;
+  height: 60vh;
+  /* Ajustez selon vos besoins */
+  background-color: var(--base-theme-bg-colo);
+  /* Couleur de fond de la zone des cartes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.card {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 500px;
+  min-height: 200px;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  /* Ajoutez une transition d'opacité pour un effet fluide */
+  /* Ajustez la valeur selon vos besoins, la moitié de la hauteur de la fenêtre */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-family: Arial, sans-serif;
+}
+
+.Buttons {
+  margin-top: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.score {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--base-theme-color-primary-dar);
+}
