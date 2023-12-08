@@ -12,6 +12,9 @@ async function loadCards() {
             const cardElement = document.createElement('div');
             cardElement.classList.add('card');
             cardElement.id = `${i + 1}`;
+            cardElement.style.borderRadius = '10px';
+            cardElement.style.borderWidth = '2px';
+            cardElement.style.borderColor = `var(--base-theme-color-primary-dark)`;
             cardElement.innerHTML = `
             <div class="card-content">
                 <h3>${card.title}</h3>

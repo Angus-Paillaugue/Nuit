@@ -7,7 +7,7 @@ h1 {
 
 .cardsContainer {
     position: relative;
-    height: 100vh;
+    height: 60vh;
     /* Ajustez selon vos besoins */
     background-color: var(--base-theme-bg-colo);
     /* Couleur de fond de la zone des cartes */
