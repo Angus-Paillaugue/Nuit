@@ -37,28 +37,27 @@ const navbarMarkup = `
 <div id="navSpacer"></div>
 `;
 
-$(document).ready(function () {
-  const baseURl = location.origin;
-  // Add Tailwind CSS
-  $("head").append(`
-    <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`
-  );
+$(document).ready(function() {
+    const baseURl = location.origin + "/frontend";
+    // Add Tailwind CSS
+    $("head").append(`
+    <link href="${baseURl}/nav/navbar.css" rel="stylesheet">`);
 
-  const logoUrl = baseURl + "/src/logo_banner.png";
+    const logoUrl = baseURl + "/src/logo_banner.png";
 
-  // Add navbar to the page
-  $(navbarMarkup.replace("{{logoUrl}}", logoUrl)).prependTo("body");
-  
-  // Nav dropdown
-  $("#hamburgerButton").click(() => {
-    $("#dropdown").toggleClass("shown");
-  });
+    // Add navbar to the page
+    $(navbarMarkup.replace("{{logoUrl}}", logoUrl)).prependTo("body");
 
-  // Update score in navbar
-  updateScoreInNavBar();
+    // Nav dropdown
+    $("#hamburgerButton").click(() => {
+        $("#dropdown").toggleClass("shown");
+    });
+
+    // Update score in navbar
+    updateScoreInNavBar();
 });
 
 const updateScoreInNavBar = () => {
-  $("#userScore").text(localStorage.getItem("score") || 0);
-  $("#userCoins").text(localStorage.getItem("coins") || 0);
+    $("#userScore").text(localStorage.getItem("score") || 0);
+    $("#userCoins").text(localStorage.getItem("coins") || 0);
 };

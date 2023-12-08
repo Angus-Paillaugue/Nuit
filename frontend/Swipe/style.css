@@ -1,13 +1,15 @@
 p,
-h3 {
+h3,
+h1 {
     color: #000;
+    text-align: center;
 }
 
 .cardsContainer {
     position: relative;
     height: 100vh;
     /* Ajustez selon vos besoins */
-    background-color: #f0f0f0;
+    background-color: var(--base-theme-bg-colo);
     /* Couleur de fond de la zone des cartes */
     display: flex;
     justify-content: center;
