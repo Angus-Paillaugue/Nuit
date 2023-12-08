@@ -17,6 +17,7 @@ function onClick(e) {
     setTimeout(() => {
         button.removeAttribute("disabled");
     }, 400);
+    moveForward();
 }
 
 function moveForward() {
