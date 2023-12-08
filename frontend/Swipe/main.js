@@ -14,7 +14,6 @@ function onClick(e) {
     } else if (button.name == "No") {
         swipeLeft();
     }
-    moveForward();
     setTimeout(() => {
         button.removeAttribute("disabled");
     }, 400);
@@ -40,6 +39,7 @@ function swipeRigth() {
         let id = null;
         clearInterval(id);
         id = setInterval(frame, 1000 / (threshold));
+
         function frame() {
             if (pos > threshold) {
                 clearInterval(id);
@@ -63,6 +63,7 @@ function swipeLeft() {
         let id = null;
         clearInterval(id);
         id = setInterval(frame, 1000 / (threshold));
+
         function frame() {
             if (pos < -threshold) {
                 clearInterval(id);
