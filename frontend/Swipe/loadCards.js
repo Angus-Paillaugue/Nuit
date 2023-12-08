@@ -1,27 +1,12 @@
 'use strict';
-const testJson = {
-    "Card": {
-        "Card1": {
-            "Title": "Titre 1",
-            "Text": "Text test 1",
-        },
-        "Card2": {
-            "Title": "Titre 2",
-            "Text": "Text test 2",
-        },
-        "Card3": {
-            "Title": "Titre 3",
-            "Text": "Text test 3",
-        }
-        // Ajoutez autant de cartes que nécessaire
-    }
-};
+
 // Code pour charger les cartes depuis l'API
 async function loadCards() {
     try {
-        //const response = await fetch('http://localhost:3000/api/cards');
-        //const cards = await response.json();
-        const cards = Object.values(testJson.Card);
+        const response = await fetch('http://localhost:3000/swiper/all-facts');
+        const cards = await response.json();
+        console.log(cards);
+        // const cards = Object.values(testJson.Card);
         let i = 0;
         for (const card of cards) {
             const cardElement = document.createElement('div');
@@ -29,8 +14,8 @@ async function loadCards() {
             cardElement.id = `${i + 1}`;
             cardElement.innerHTML = `
             <div class="card-content">
-                <h3>${card.Title}</h3>
-                <p>${card.Text}</p>
+                <h3>${card.title}</h3>
+                <p>${card.text}</p>
             </div>
             `;
 

@@ -20,7 +20,8 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    min-width: 300px;
+    min-width: 500px;
+    min-height: 200px;
     transition: opacity 0.3s ease-in-out;
     transform: translate(-50%, -50%);
     /* Ajoutez une transition d'opacité pour un effet fluide */
