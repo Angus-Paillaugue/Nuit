@@ -22,7 +22,7 @@
     display:inline-grid;
     grid-template-columns: repeat(9, var(--game-block-size)) ;
     grid-template-rows: repeat(20, var(--game-block-size)) ;
-    background-color: gray;
+    background-color: var(--base-theme-color-primary-dark);
     border:solid black;
     border-radius: 8px; 
 }
@@ -31,8 +31,8 @@
 #TETRIS>div:nth-child(1)>div
 {
     box-sizing: border-box;
+    border:solid black;
     width:100%;
-    border:solid blue;
     border-radius: 5px;
 }
 
@@ -65,12 +65,12 @@
 
 #TETRIS>div:not(:first-child):not(:nth-child(4))
 {
+    position: relative;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-}
-
-#TETRIS>div:not(:first-child):not(:nth-child(4)) {
-    position: relative;
+    text-align: center;
+    width:50%;
+    background-color: var(--base-theme-color-primary);
 }
 
 #TETRIS>div:not(:first-child):not(:nth-child(4))::before 
@@ -81,15 +81,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5; /* Opacité du fond */
-    z-index: -1; /* Place le pseudo-élément derrière le contenu principal */
+    opacity: 0.5;
+    z-index: -1;
 }
 
 #FLECHES
 {
     grid-column:3;
-    height: 100%;
-    position: relative; /* Position relative pour l'élément parent */
+    height: 50%;
+    position: relative;
 }
 #FLECHES img{
     position: absolute;
@@ -99,9 +99,9 @@
 {
     visibility: hidden;
     width: 80%;
-    background-color: var(--base-theme-bg-color);
+    background-color: var( --base-theme-color-primary-light);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    color: #fff;
+    color: var(--base-theme-text-color);
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
@@ -110,7 +110,7 @@
     top:-10%;
 }
 
-#FLECHES:hover>span 
+#FLECHES:hover>img + span 
 {
     visibility:visible;
 }
@@ -122,11 +122,11 @@
 }
 
 .blockSolar{
-    color:red;
+    background-color:#B82B2B;
 }
 .blockWind{
-    color:green;
+    color:#4FBC7C;
 }
 .blockHydraulic{
-    color:blue;
+    background-color: #006EAB;
 }
