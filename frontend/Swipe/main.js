@@ -1,4 +1,3 @@
-// Make the DIV element draggable:
 document.getElementById("yesButton").addEventListener("click", onClick);
 document.getElementById("noButton").addEventListener("click", onClick);
 
@@ -7,11 +6,14 @@ function getCurrentCard() {
 }
 
 function onClick(e) {
+    const _card = document.getElementById(getCurrentCard());
     let button = e.target;
     button.setAttribute("disabled", "true");
-    if (button.name == "Yes") {
+    if (button.name == "Yes" && _card != null) {
+        document.getElementById("score").textContent = parseInt(document.getElementById("score").innerText) + parseInt(_card.querySelector("label").innerText);
         swipeRigth();
-    } else if (button.name == "No") {
+    } else if (button.name == "No" && _card != null) {
+        document.getElementById("score").textContent = parseInt(document.getElementById("score").innerText) - parseInt(_card.querySelector("label").innerText);
         swipeLeft();
     }
     setTimeout(() => {
