@@ -5,20 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let score = 0;
 
     const fruitsList = [
-        "./ressources/centrale-gaz.png",
-        "./ressources/charbon.png",
-        "./ressources/plateforme-petroliere.png",
-        "./ressources/pompe-essence.png",
-        "./ressources/puit-petrole.png",
-        "./ressources/usine.png"
+        "./fruitNinja/ressources/centrale-gaz.png",
+        "./fruitNinja/ressources/charbon.png",
+        "./fruitNinja/ressources/plateforme-petroliere.png",
+        "./fruitNinja/ressources/pompe-essence.png",
+        "./fruitNinja/ressources/puit-petrole.png",
+        "./fruitNinja/ressources/usine.png"
     ];
 
     const badList = [
-				"./ressources/centrale-eau.png",
-				"./ressources/centrale-nucleaire.png",
-				"./ressources/eolienne.png",
-				"./ressources/panneau-solaire.png"
-    	];
+        "./fruitNinja/ressources/centrale-eau.png",
+        "./fruitNinja/ressources/centrale-nucleaire.png",
+        "./fruitNinja/ressources/eolienne.png",
+        "./fruitNinja/ressources/panneau-solaire.png"
+    ];
 
     fruit.addEventListener("click", sliceFruit);
 
