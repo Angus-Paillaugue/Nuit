@@ -81,7 +81,7 @@ function display(i) {
     }
     if (i > 0) {
         document.getElementById("soluce").textContent = "Solution a la question précedente : " + sol[i-1];
-        document.getElementById("explique").textContent = "Explication: " + explique[i-1];
+        document.getElementById("explique").textContent = "Explication de la question précedente : " + explique[i-1];
     }
     
 
