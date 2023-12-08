@@ -35,7 +35,7 @@ const showPatoche = () => {
 setTimeout(showPatoche, getRandomTime());
 
 $(".themeSwitch > img").dblclick(() => {
-    $("body").append(`<img src="https://raw.githubusercontent.com/Angus-Paillaugue/Nuit/main/frontend/src/charlie.webp" id="charlie" />`);
+    $("body").append(`<img src="https://raw.githubusercontent.com/Angus-Paillaugue/Nuit/main/frontend/src/charlie.png" id="charlie" />`);
     setTimeout(() => {
         $("#charlie").remove();
     }, 3000);
