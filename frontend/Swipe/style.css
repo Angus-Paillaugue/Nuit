@@ -45,5 +45,10 @@ h1 {
     font-family: Arial, sans-serif;
 }
 
+.Buttons {
+    margin-top: 140px;
+    transform: translate(-50%, -50%);
+}
+
 
 /* Ajoutez d'autres styles selon vos besoins */
